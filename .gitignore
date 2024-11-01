@@ -1,0 +1,29 @@
+# Gradle specific files
+.gradle/
+build/
+
+# Ignore Gradle wrapper files
+gradle/wrapper/gradle-wrapper.jar
+gradle/wrapper/gradle-wrapper.properties
+
+# Ignore IntelliJ IDEA project files
+.idea/
+*.iml
+
+# Ignore Eclipse project files
+.project
+.classpath
+.settings/
+bin/
+
+# Ignore VS Code project files
+.vscode/
+
+# Ignore MacOS specific files
+.DS_Store
+
+# Ignore Linux specific files
+*~
+
+# Ignore Windows specific files
+Thumbs.db

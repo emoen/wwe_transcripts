@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Search Results</title>
+</head>
+<body>
+    <h1>Search Results</h1>
+    <div th:if="${error}">
+        <p th:text="${error}"></p>
+    </div>
+    <div th:if="${results.size() == 0}">
+        <p>No results found.</p>
+    </div>
+    <div th:if="${results.size() > 0}">
+        <ul>
+            <li th:each="result : ${results}">
+                <p><strong>Timestamp:</strong> <span th:text="${result['author']}"></span></p>
+                <p><strong>Text:</strong> <span th:each="text : ${result['text']}" th:text="${text}"></span></p>
+                <p><strong>ID:</strong> <span th:text="${result['id']}"></span></p>
+                <hr/>
+            </li>
+        </ul>
+    </div>
+    <a href="/">Back to Search</a>
+</body>
+</html>
